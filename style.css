@@ -1,0 +1,226 @@
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--primary-red);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+
+.container .section-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: white;
+    padding: 1rem 6rem;
+}
+
+.container .section-description h1 {
+    font-size: 3rem; 
+}
+
+.container .section-description h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+
+.container .section-form {
+    width: 50%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1rem 4rem;
+}
+
+.container .section-form .section-link {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.7rem;
+    box-shadow: 0px 7px 0px 0px hsla(0, 0%, 0%, 0.200);
+    background-color: var(--accent-blue);
+}
+
+.container .section-form .section-link:hover {
+    background-color: hsl(248, 77%, 72%);
+}
+
+.container .section-form .section-input {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0px 7px 0px 0px hsla(0, 0%, 0%, 0.200);
+    margin-top: 1rem;
+    background-color: white;
+}
+
+.container .section-form .section-input form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.container .section-form .section-input .form-error {
+    border: 2px solid hsl(0, 100%, 74%);
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 95%;
+}
+
+.container .section-form .section-input form input {
+    width: 80%;
+    height: 7vh;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.container .section-form .section-input form input::placeholder {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--neutral-dark-blue);
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.container .section-form .section-input form input:hover {
+    outline: none;
+    border: 1px solid rgba(6, 6, 80, 0.473);
+    border-radius: 0.2rem;
+}
+
+.container .section-form .section-input form .message-error-hidden {
+    visibility: hidden !important;
+}
+
+.container .section-form .section-input form .message-error {
+    /* display: none; */
+    visibility: visible;
+    font-style: italic;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    padding-left: 14rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.container .section-form .section-input form button {
+    width: 80%;
+    height: 7vh;
+    background-color: var(--primary-green);
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 0px 2px 0px 0px hsla(154, 59%, 51%, 0.534);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container .section-form .section-input form button:hover {
+    background-color:hsl(154, 78%, 61%);
+}
+
+.container .section-form .section-input form .message-terms {
+    color: rgb(201, 201, 201);
+    margin-top: 1rem;
+    font-size: 0.6rem;
+}
+
+.container .section-form .section-input form span strong {
+    color: var(--primary-red);
+    cursor: pointer;
+}
+
+.container .section-form .section-input form span strong:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .container .section-description {
+         width: 100%;
+         padding: 2rem 1.5rem;
+         text-align: center;
+    }
+    .container .section-description h1 {
+        font-size: 2rem;
+        margin-top: 2.5rem;
+    }
+    
+    .container .section-form {
+        width: 100%;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .container .section-form .section-link {
+        height: 12vh;
+        margin-bottom: 0.5rem;
+    }
+
+    .container .section-form .section-link a {
+        padding: 0 4rem;
+    }
+
+    .container .section-form .section-input form input::placeholder {
+        padding-left: 0;
+    }
+
+    .container .section-form .section-input form button {
+        font-size: 1rem;
+    }
+
+    .container .section-form .section-input form span {
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+}
