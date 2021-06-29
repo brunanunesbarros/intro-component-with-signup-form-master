@@ -32,6 +32,7 @@ html {
 
 .container .section-description {
     width: 50%;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -52,6 +53,7 @@ html {
 
 .container .section-form {
     width: 50%;
+    max-width: 650px;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -98,6 +100,14 @@ html {
     margin: 2rem auto;
 }
 
+.container .section-form .section-input form .form-input-checking {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container .section-form .section-input .form-error {
     border: 2px solid hsl(0, 100%, 74%);
     background-image: url(./images/icon-error.svg);
@@ -120,28 +130,32 @@ html {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--neutral-dark-blue);
-    padding-left: 1rem;
     text-align: left;
+}
+
+.container .section-form .section-input form input:focus {
+    outline: none;
+    outline-style: none;
+    border: 2px solid rgba(6, 6, 80, 0.473);
+    border-radius: 0.2rem;
+    
 }
 
 .container .section-form .section-input form input:hover {
     outline: none;
-    border: 1px solid rgba(6, 6, 80, 0.473);
+    border: 2px solid rgba(6, 6, 80, 0.473);
     border-radius: 0.2rem;
 }
 
-.container .section-form .section-input form .message-error-hidden {
-    visibility: hidden !important;
-}
-
 .container .section-form .section-input form .message-error {
-    /* display: none; */
-    visibility: visible;
+    width: 80%;
+    visibility: hidden;
     font-style: italic;
     font-size: 0.7rem;
     font-weight: 700;
     color: var(--primary-red);
-    padding-left: 14rem;
+    /* padding-left: 14rem; */
+    text-align: right;
     margin-top: 0.2rem;
     margin-bottom: 1rem;
 }
@@ -151,15 +165,15 @@ html {
     height: 7vh;
     background-color: var(--primary-green);
     border: none;
-    border-radius: 0.2rem;
-    box-shadow: 0px 2px 0px 0px hsla(154, 59%, 51%, 0.534);
+    border-radius: 0.3rem;
+    box-shadow: 0px 2px 0px 0px #36b07b;
     color: white;
     font-weight: 500;
     cursor: pointer;
 }
 
 .container .section-form .section-input form button:hover {
-    background-color:hsl(154, 78%, 61%);
+    background-color: #79dcb1;
 }
 
 .container .section-form .section-input form .message-terms {
@@ -178,49 +192,93 @@ html {
     color: white;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1170px) {
     .container {
         flex-direction: column;
         padding: 0;
     }
     .container .section-description {
          width: 100%;
+         max-width: 650px;
          padding: 2rem 1.5rem;
          text-align: center;
     }
     .container .section-description h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-top: 2.5rem;
+    }
+
+    .container .section-description h3 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     
     .container .section-form {
         width: 100%;
+        max-width: 650px;
+        min-height: 100%;
         padding: 1.5rem;
         margin-bottom: 1rem;
-    }
+    } 
 
     .container .section-form .section-link {
-        height: 12vh;
+        height: 10vh;
         margin-bottom: 0.5rem;
     }
 
     .container .section-form .section-link a {
         padding: 0 4rem;
+        font-size: 1rem;
+    }
+    
+    .container .section-form .section-input {
+       min-height: 50vh;
+    }
+
+    .container .section-form .section-input form input {
+        width: 85%;
+        height: 5vh;
     }
 
     .container .section-form .section-input form input::placeholder {
         padding-left: 0;
+        font-size: 1rem;
+    }
+    
+    .container .section-form .section-input form .message-error {
+        font-size: 0.8rem;
+        padding-left: 6rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.5rem;
     }
 
     .container .section-form .section-input form button {
+        width: 85%;
+        height: 6vh;
         font-size: 1rem;
     }
 
     .container .section-form .section-input form span {
-        font-size: 0.7rem;
         text-align: center;
         padding: 0 2rem;
+    }
+
+    .container .section-form .section-input form .message-terms {
+        font-size: 0.9rem;
+    }
+
+}
+@media (max-width: 405px) {
+    .container .section-form .section-input form input {
+        height: 7vh;
+    }
+
+    .container .section-form .section-input form .message-error {
+        font-size: 0.6rem;
+    }
+
+    .container .section-form .section-input form button {
+        height: 7vh;
     }
 
 }

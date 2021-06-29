@@ -24,14 +24,22 @@
         </div>
         <div class=section-input>
           <form>
-            <input id="first-name" type="text" placeholder="First Name" required>
-            <span class="message-error message-error-hidden">First Name cannot be empty</span>
-            <input id="last-name" type="text" placeholder="Last Name" required>
-            <span class="message-error message-error-hidden">Last Name cannot be empty</span>
-            <input id="email-address" type="email" placeholder="Email Address" required>
-            <span class="message-error message-error-hidden">Looks like this is not an email</span>
-            <input id="password" type="password" placeholder="Password" required>
-            <span class="message-error message-error-hidden">Password cannot be empty</span>
+            <div class="form-input-checking">
+              <input class="" id="first-name" type="text" onfocus="clickInput('first-name')" onblur="outsideInput('first-name', 'First Name')" placeholder="First Name" required>
+              <p id="par-first-name" class="message-error">First Name cannot be empty</p>              
+            </div>
+            <div class="form-input-checking">
+              <input class="" id="last-name" type="text" onfocus="clickInput('last-name')" onblur="outsideInput('last-name', 'Last Name')" placeholder="Last Name" required>
+              <p id="par-last-name" class="message-error">Last Name cannot be empty</p>
+            </div>
+            <div class="form-input-checking">
+              <input class="" id="email-address" type="email" onfocus="clickInput('email-address')" onblur="outsideInput('email-address', 'Email Address')" placeholder="Email Address" required>
+              <p id="par-email-address" class="message-error">Looks like this is not an email</p>
+            </div>
+            <div class="form-input-checking">
+              <input class="" id="password" type="password" onfocus="clickInput('password')" onblur="outsideInput('password', 'Password')" placeholder="Password" required>
+              <p id="par-password" class="message-error">Password cannot be empty</p>
+            </div>
             <button type="submit" onclick="submitForm()">CLAIM YOUR FREE TRIAL</button>
             <span class="message-terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></span>
           </form>
