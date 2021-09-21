@@ -34,8 +34,7 @@ Versão Mobile
 
 ### Links
 
-- [Solução]()
-- [Github Page](https://brunanunesbarros.github.io/intro-component-with-signup-form-master/)
+- [Solução](https://brunanunesbarros.github.io/intro-component-with-signup-form-master/)
 
 ## Meu processo
 
